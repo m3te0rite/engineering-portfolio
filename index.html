@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarav Sharma | Portfolio</title>
+  <style>
+
+    ::-webkit-scrollbar{
+      display: none;
+    }
+
+    :root {
+      --bg: #1a1a2e;
+      --fg: #ffffff;
+      --accent: #ff6f61;
+      --secondary: #16213e;
+      --highlight: #0f3460;
+      --font: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+      background: linear-gradient(135deg, var(--accent), var(--highlight));
+      color: var(--bg);
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: var(--highlight);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--fg);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 2.5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: linear-gradient(145deg, #ff9a8b, #fad0c4);
+      color: #000;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .project h3 {
+      color: var(--highlight);
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project li {
+      margin-bottom: 0.5rem;
+    }
+
+    .about, .contact {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      border-radius: 10px;
+      padding: 2rem;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    .about ul {
+      margin-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .about li {
+      list-style-type: disc;
+      margin-bottom: 0.7rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 0.9rem; /* Adjust font size to fit */
+        padding: 0.5rem;
+      }
+
+      .project h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Aarav Sharma</h1>
+    <p>Crafting vibrant digital experiences with passion and code.</p>
+  </header>
+
+  <nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About Me</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="portfolio">
+    <div>
+      <br>
+    <h2>Projects</h2>
+    <div class="portfolio">
+
+      <div class="project">
+        <h2>🧬 Cancer Detection AI</h2>
+        <p><em>AI-powered lung cancer detection using symptoms and medical images.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>Torch Library</li>
+          <li>Image classifier + symptom model</li>
+          <li>Doctor & patient view</li>
+          <li>Jupyter Notebook</li>
+          <li>Frontend using Html CSS JavaScript</li>
+
+        </ul>
+        <p>Note: Developed with team in hackathon; won 2nd place</p>
+      </div>
+
+      <div class="project">
+        <h2>📚 Study Genius</h2>
+        <p><em>AI study tool for busy students that actually helps — summarizer, quiz maker, content explainer.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>Together.ai API</li>
+          <li>Usable for everyone, and completely free</li>
+          <li>Next.js (no hardcoding)</li>
+          <li>In process of implementing RAG</li>
+          <li>AP Human Geography based prompt engineering</li>
+
+        </ul>
+      </div>
+
+
+      <div class="project">
+        <h2>🆘 Narcan AR (Congressional App Challenge)</h2>
+        <p><em>AR-powered opioid overdose trainer + Narcan finder.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>Uses AR (Three.js + WebXR)</li>
+          <li>Mobile, website, and desktop builds (HTML CSS JavaScript for web)</li>
+          <li>Guides users on overdose response</li>
+        </ul>
+        <p>Note: Still in development stages</p>
+      </div>
+
+      <div class="project">
+        <h2>📝 PostPolish (AI MVP)</h2>
+        <p><em>Turns rough ideas into polished posts with user choice in smart, funny, or natural tone. Helps save creators time and generate quality content.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>HTML/CSS/JS</li>
+          <li>OpenAI API Key for AI fulfillment</li>
+          <li>Polishes raw input → ready-to-post</li>
+          <li>Free version with limited use</li>
+          <li>Platform based prompt engineering for compatability with character limits, video length, etc.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <h2>🤝 Custom Event Registration Form</h2>
+        <p><em>A tailored event registration system built for a nonprofit organization to streamline attendee management while preserving their branding and cultural theme.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>HTML CSS JavaScript page</li>
+          <li>Responsive for all devices</li>
+          <li>Google API -> Spreadsheet live updates</li>
+          <li>AI Usage to format and handle duplicate inputs</li>
+        </ul>
+        <p>Note: Developed for non-profit organization Gayatri Parivar</p>
+      </div>
+
+      <div class="project">
+        <h2>💻 Full Stack Ecommerce site</h2>
+        <p><em>A full-stack eCommerce website built to market and sell custom-built gaming PCs and mechanical keyboards.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>HTML CSS JavaScript</li>
+          <li>Express.js implementation</li>
+          <li>Stripe checkout + Vercel hosting</li>
+        </ul>
+        <p>Note: This is actually for my own brand for selling custom build PCS and Keyboards. This site helped me present my work online to my friends and helped me grow my network of customers. As of now, the site is using a test stripe key because most payments I conduct are in-person.</p>
+      </div>
+
+      <div class="project">
+        <h2>🛍️ Dropshipping Cologne Store</h2>
+        <p><em>Beautiful e-commerce site with admin dashboard and Stripe payments.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>Next.js (no hardcoding)</li>
+          <li>Connected to FragranceNet</li>
+          <li>Stripe checkout + Vercel hosting</li>          
+          <li>Google Firebase for product database</li>
+          <li>Admin Page with google sign in for easy product adding</li>
+          <li>Stripe checkout + Vercel hosting</li>
+
+
+        </ul>
+      </div>
+
+      <div class="project">
+        <h2>🌿 Marketing Website for Lawn Care Businesses</h2>
+        <p><em>A sleek, conversion-focused website template built to help companies establish an online presence and grow their client base.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Responsive design for desktop and mobile</li>
+          <li>Vercel hosting</li>
+        </ul>
+        <p>Note: Built for local lawncare business owners.</p>
+      </div>
+
+       <div class="project">
+        <h2>🌐 PseudoGen - Python to Pseudocode Converter</h2>
+        <p><em>A lightweight tool that automatically converts Python code into clean, readable pseudocode, making it easier to understand logic without diving into syntax.</em></p>
+        <h3>Tech:</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Responsive design for desktop and mobile</li>
+          <li>Vercel hosting</li>
+          <li>Python logic parsing</li>
+          <li>Frontend input/output interface</li>
+        </ul>
+        <p>Note: Very simple, but still functional and saves time for lengthy program conversions.</p>
+      </div>
+
+
+
+    </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <p>
+        Welcome! I currently go to high school at Round Rock High School. Im a soon-to-be sophmore, and I'm an  enthusiastic developer passionate about crafting impactful digital experiences. My journey in tech is driven by curiosity, creativity, and a love for solving real-world problems.
+      </p>
+      <ul>
+        <li>
+          <strong>Experience:</strong> Over 3 years building responsive web applications and creative user interfaces.
+        </li>
+        <li>
+          <strong>Skills:</strong> Coding experience in HTML, CSS, JavaScript, React, and modern frameworks.
+        </li>
+        <li>
+          <strong>Interests:</strong> UI/UX design, animation, and exploring the latest web technologies.
+        </li>
+        <li>
+          <strong>Approach:</strong> Focused on clean code, maintainable solutions, and collaborative teamwork.
+        </li>
+      </ul>
+      <p>
+        When I'm not coding, you'll find me experimenting with design tools, learning new frameworks, or sharing knowledge with the developer community, as well as playing basketball with friends.
+      </p>
+      </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+    <p>Want to collaborate or learn more about my work? Reach out!</p>
+    <a href="mailto:aarav.xtech@gmail.com">aarav.xtech@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aarav Sharma. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
